@@ -1,5 +1,5 @@
 # Title: Huddle landing page
-* Click <a href="/dist/index.html" target="_blank">here</a> to view the project.
+* Click <a href="https://mercado-joshua.github.io/huddle-landing-page/dist/index.html" target="_blank">here</a> to view the project.
 * Checkout src folder for source code.
 <br>
 ***Note:*** the `dist's css folder` is intended to be uncompressed to let others view the CSS code in a readable format.
