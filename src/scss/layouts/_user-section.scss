@@ -1,0 +1,54 @@
+.user-section {
+    background: hsl(207, 100%, 98%);
+}
+
+.userbox {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 3rem 0;
+
+    /// apply .-fade animation class in this element
+    > .imagebox {
+        > .image {
+            opacity: 0;
+            transition: opacity 500ms ease-in;
+
+            &.-fade {
+                opacity: 1;
+            }
+        }
+    }
+
+    > .contentbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        opacity: 0;
+        transition: opacity 500ms ease-in;
+
+        &.-fade {
+            opacity: 1;
+        }
+
+        > :where(.title, .description) {
+            text-align: center;
+        }
+
+        > .title {
+            font-weight: bold;
+        }
+    }
+
+    /// Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        > .contentbox {
+            order: -1;
+        }
+    }
+}

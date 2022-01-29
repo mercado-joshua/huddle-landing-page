@@ -1,0 +1,53 @@
+.question-section {
+    position: relative;
+
+    > :where(.picturebox:first-child, .picturebox:last-child) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        > .image {
+            width: 100%;
+        }
+    }
+
+    > .picturebox:last-child {
+        top: unset;
+        bottom: 0;
+    }
+}
+
+.questionbox {
+    padding: 10rem 0;
+
+    > .contentbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        opacity: 0;
+        transition: opacity 500ms ease-in;
+
+        &.-fade {
+            opacity: 1;
+        }
+
+        > .title {
+            font-weight: bold;
+            padding: 0 3rem;
+            text-align: center;
+        }
+    }
+
+    /// Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        padding: 13rem 0;
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        padding: 16rem 0;
+    } 
+
+}

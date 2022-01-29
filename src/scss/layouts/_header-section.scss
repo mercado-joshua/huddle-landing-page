@@ -1,0 +1,11 @@
+.headerbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 2rem 0;
+
+    > .image {
+        width: 8.5em;
+    }
+}

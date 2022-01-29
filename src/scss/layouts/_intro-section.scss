@@ -1,0 +1,80 @@
+.intro-section {
+    position: relative;
+
+    > .picturebox {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        > .image {
+            width: 100%;
+        }
+    }
+}
+
+.counter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    padding: 5rem 2rem;
+
+    /// apply .-fade animation class in this element
+    > .imagebox {
+        > .image {
+            opacity: 0;
+            transition: opacity 500ms ease-in;
+
+            &.-fade {
+                opacity: 1;
+            }
+        }
+    }
+
+    > .contentbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+
+        > :where(.title, .description) {
+            text-align: center;
+        }
+
+        > .title {
+            font-weight: bold;
+        }
+    }
+
+    > .counterbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4em;
+
+        > .countbox {
+            > :where(.counter, .description) {
+                text-align: center;
+            }
+
+            > .counter {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+
+        /// Small devices (portrait tablets and large phones, 600px and up)
+        @media only screen and (min-width: 600px) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(min-content, 15em));
+            justify-content: space-around;
+            align-items: normal;
+        }
+
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        padding-bottom: 9rem;
+    }
+}

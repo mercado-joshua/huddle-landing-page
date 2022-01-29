@@ -1,0 +1,40 @@
+.signup-btn,
+.cta-btn,
+.newsletter-btn {
+    padding: .3rem 1.5rem;
+    background: transparent;
+    border-radius: 2rem;
+    border: 1px solid hsl(322, 100%, 66%);
+    color: hsl(322, 100%, 66%);
+    transition:
+        background 250ms ease-in-out,
+        color 250ms ease-in-out,
+        transform 150ms ease;
+
+    &:where(:focus, :hover) {
+        background: hsl(322, 100%, 66%);
+        color: #fff;
+    }
+    
+    &:active {
+        transform: scale(.99);
+    }
+}
+
+.cta-btn,
+.newsletter-btn {
+    padding: .3rem 2.5rem;
+    background: hsl(322, 100%, 66%);
+    color: #fff;
+    box-shadow: 0px 1px 6px 0px rgb(0 0 0 / 30%);
+
+    &:where(:focus, :hover) {
+        background: #fff;
+        color: hsl(322, 100%, 66%);
+    }
+}
+
+.newsletter-btn {
+    border-radius: .3em;
+    padding: .5rem 2.5rem;
+}

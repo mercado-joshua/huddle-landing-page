@@ -1,0 +1,621 @@
+*:where(::before, ::after) {
+  box-sizing: border-box;
+}
+
+ul, ol, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+:where(ul, ol) > li {
+  list-style: none;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+[class*=-btn] {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border-style: none;
+  height: auto;
+}
+
+.max-wrapper {
+  max-width: 992px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.headerbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  padding: 2rem 0;
+}
+.headerbox > .image {
+  width: 8.5em;
+}
+
+.intro-section {
+  position: relative;
+}
+.intro-section > .picturebox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.intro-section > .picturebox > .image {
+  width: 100%;
+}
+
+.counter-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6em;
+  padding: 5rem 2rem;
+}
+.counter-section > .imagebox > .image {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.counter-section > .imagebox > .image.-fade {
+  opacity: 1;
+}
+.counter-section > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+.counter-section > .contentbox > :where(.title, .description) {
+  text-align: center;
+}
+.counter-section > .contentbox > .title {
+  font-weight: bold;
+}
+.counter-section > .counterbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4em;
+}
+.counter-section > .counterbox > .countbox > :where(.counter, .description) {
+  text-align: center;
+}
+.counter-section > .counterbox > .countbox > .counter {
+  font-size: 3rem;
+  font-weight: bold;
+}
+@media only screen and (min-width: 600px) {
+  .counter-section > .counterbox {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(-webkit-min-content, 15em));
+    grid-template-columns: repeat(2, minmax(min-content, 15em));
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: normal;
+    -webkit-align-items: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .counter-section {
+    padding-bottom: 9rem;
+  }
+}
+
+.grow-section {
+  background: #f5faff;
+}
+
+.growbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4em;
+  padding: 3rem 0;
+}
+.growbox > .imagebox > .image {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.growbox > .imagebox > .image.-fade {
+  opacity: 1;
+}
+.growbox > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.growbox > .contentbox.-fade {
+  opacity: 1;
+}
+.growbox > .contentbox > :where(.title, .description) {
+  text-align: center;
+}
+.growbox > .contentbox > .title {
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .growbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .growbox > .contentbox {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.community-section {
+  position: relative;
+}
+.community-section > :where(.picturebox:first-child, .picturebox:last-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.community-section > :where(.picturebox:first-child, .picturebox:last-child) > .image {
+  width: 100%;
+}
+.community-section > .picturebox:last-child {
+  top: unset;
+  bottom: 0;
+}
+
+.communitybox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4em;
+  padding: 11rem 0;
+}
+.communitybox > .imagebox > .image {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.communitybox > .imagebox > .image.-fade {
+  opacity: 1;
+}
+.communitybox > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.communitybox > .contentbox.-fade {
+  opacity: 1;
+}
+.communitybox > .contentbox > :where(.title, .description) {
+  text-align: center;
+}
+.communitybox > .contentbox > .title {
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .communitybox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.user-section {
+  background: #f5faff;
+}
+
+.userbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4em;
+  padding: 3rem 0;
+}
+.userbox > .imagebox > .image {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.userbox > .imagebox > .image.-fade {
+  opacity: 1;
+}
+.userbox > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.userbox > .contentbox.-fade {
+  opacity: 1;
+}
+.userbox > .contentbox > :where(.title, .description) {
+  text-align: center;
+}
+.userbox > .contentbox > .title {
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .userbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .userbox > .contentbox {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.question-section {
+  position: relative;
+}
+.question-section > :where(.picturebox:first-child, .picturebox:last-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.question-section > :where(.picturebox:first-child, .picturebox:last-child) > .image {
+  width: 100%;
+}
+.question-section > .picturebox:last-child {
+  top: unset;
+  bottom: 0;
+}
+
+.questionbox {
+  padding: 10rem 0;
+}
+.questionbox > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.questionbox > .contentbox.-fade {
+  opacity: 1;
+}
+.questionbox > .contentbox > .title {
+  font-weight: bold;
+  padding: 0 3rem;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .questionbox {
+    padding: 13rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .questionbox {
+    padding: 16rem 0;
+  }
+}
+
+.footer-section {
+  background: #00252e;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.newsletter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+.newsletter > .newsletter-btn {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+@media only screen and (min-width: 992px) {
+  .newsletter {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: repeat(3, auto);
+  }
+  .newsletter > .title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .newsletter > .description {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+}
+
+.contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+.contact > .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+.social-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.footerbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4em;
+}
+.footerbox > .contentbox:last-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5em;
+}
+@media only screen and (min-width: 768px) {
+  .footerbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: normal;
+    -webkit-align-items: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .footerbox > .contentbox:last-child {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.signup-btn,
+.cta-btn,
+.newsletter-btn {
+  padding: 0.3rem 1.5rem;
+  background: transparent;
+  border-radius: 2rem;
+  border: 1px solid #ff52bf;
+  color: #ff52bf;
+  -webkit-transition: background 250ms ease-in-out, color 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+}
+.signup-btn:where(:focus, :hover),
+.cta-btn:where(:focus, :hover),
+.newsletter-btn:where(:focus, :hover) {
+  background: #ff52bf;
+  color: #fff;
+}
+.signup-btn:active,
+.cta-btn:active,
+.newsletter-btn:active {
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+.cta-btn,
+.newsletter-btn {
+  padding: 0.3rem 2.5rem;
+  background: #ff52bf;
+  color: #fff;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.cta-btn:where(:focus, :hover),
+.newsletter-btn:where(:focus, :hover) {
+  background: #fff;
+  color: #ff52bf;
+}
+
+.newsletter-btn {
+  border-radius: 0.3em;
+  padding: 0.5rem 2.5rem;
+}
+
+.newsletter > .title {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.newsletter > .email {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.3em;
+}
+
+.social-menu .item .link .icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
